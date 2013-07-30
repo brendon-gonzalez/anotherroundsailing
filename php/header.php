@@ -1,6 +1,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="">
+    <meta name="description" content="Sail around Lake Erie &amp; Presque Isle Bay aboard Another Round a 28' O'day sail boat.">
+    <meta name="keywords" content="Lake Erie, Preque Isle, Another Round, Sailing, Sail">
     <meta name="viewport" content="width=device-width">
     <link type="favicon" href="<?php echo $base_url ?>favicon.ico" />
     <link rel="stylesheet" href="<?php echo $base_url ?>css/foundation.css">

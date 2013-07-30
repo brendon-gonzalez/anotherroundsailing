@@ -2,45 +2,72 @@
 
 include 'config.php';
 
-$email = $_POST['email'];
+$email = (isset($_POST['email']) && $_POST['email']!='') ? $_POST['email'] : 'noemail@dontreply.com';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $from_message = $_POST['message'];
-$message = "You have recived a message from ".$name."<br />Phone Number: ".$phone."<br />Email: <a href=\"".$email."\">".$email."</a><br />Message: ".$from_message;
+$message = "You have recived a message from ".$name."\nPhone Number: ".$phone."\nEmail: ".$email."\nMessage: ".$from_message;
 
-$validate = _validate($phone, $email);
-die($validate);
-if($validate!=true)
+
+$validate = _validate($name, $phone, $email, $from_message);
+if($validate!==true)
 {
-	echo $validate;
+	$arr = array(	'type' => 'fail',
+					'name' => $validate['name'],
+					'details' => $validate['details']);
+	print json_encode($arr);
 }else {
-	//mail_utf8($to_email, $name, $email, $message);
-	echo $validate . 'DUUDE';
+	mail_utf8($to_email, $email, 'Info Request', $message, $email_config);
+	print json_encode(array('type'=>'success'));
 }
-function _validate($phone, $email)
+function _validate($name, $phone, $email, $message)
 {
-	if(!preg_match("/^([1]-)?[0-9]{3}-[0-9]{3}-[0-9]{4}$/i", $phone) ) {
-		return 'Invalid Phone';
-	}
-	else if(!check_email_address($email))
+	$errors = array('name'=>NULL, 'details'=>NULL);
+	if($name=='')
 	{
-		return 'Invalid Email';
+		$errors['name']='name';
+		$errors['details']='Name Required';
+		return $errors;
+	}
+	if($message=='')
+	{
+		$errors['name']='message';
+		$errors['details']='Message Required';
+		return $errors;
+	}
+	if($phone!='')
+	{
+		if(!preg_match("/^(1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/", $phone) ) {
+			$errors['name']='phone';
+			$errors['details']='Invalid Phone';
+			return $errors;
+		}
+	}
+	if(!check_email_address($email))
+	{
+		$errors['name']='email';
+		$errors['details']='Invalid Email';
+		return $errors;
 	}	
 	else {
 		return true;	
 	}
 }
 
-function mail_utf8($to, $from_user, $from_email, $subject = '', $message = '')
-{ 
-	$from_user = "=?UTF-8?B?".base64_encode($from_user)."?=";
-    $subject = "=?UTF-8?B?".base64_encode($subject)."?=";
+function mail_utf8($to, $from, $subject = '', $body = '', $email_config)
+{
+    require_once "Mail.php";
 
-    $headers = "From: $from_user <$from_email>\r\n". 
-               "MIME-Version: 1.0" . "\r\n" . 
-               "Content-type: text/html; charset=UTF-8" . "\r\n"; 
+    $headers = array ('From' => $from,
+      'To' => $to,
+      'Subject' => $subject);
+    $smtp = Mail::factory('smtp', $email_config);
 
-    return mail($to, $subject, $message, $headers); 
+    $mail = $smtp->send($to, $headers, $body);
+
+    if (PEAR::isError($mail)) {
+      echo json_encode(array("error"=>$mail->getMessage())); 
+     } 
 }
 
 function check_email_address($data, $strict = false) 

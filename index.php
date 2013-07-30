@@ -1,8 +1,8 @@
 <?php include('php/config.php');  
-if(in_array($params[2], $safe_pages)) {  
-	include('pages/'.$params[2].".php");  
+if(in_array($params[$pkey], $safe_pages)) {  
+	include('pages/'.$params[$pkey].".php");  
 }
-elseif ($params[2]=='') {
+elseif ($params[$pkey]=='') {
 	include('pages/home.php');
 } else {  
 	include("/pages/404.php");  

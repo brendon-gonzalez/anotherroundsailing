@@ -1,0 +1,4 @@
+[18-Jun-2012 20:50:50 UTC] PHP Warning:  fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: unable to connect to http://www.anotherroundsailing.com:25 (Unable to find the socket transport &quot;http&quot; - did you forget to enable it when you configured PHP?) in /home/anotherr/public_html/mail/index.php on line 15
+[18-Jun-2012 20:50:50 UTC] PHP Warning:  fgets() expects parameter 1 to be resource, boolean given in /home/anotherr/public_html/mail/index.php on line 17
+[18-Jun-2012 20:51:17 UTC] PHP Warning:  fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: unable to connect to http://anotherroundsailing.com:25 (Unable to find the socket transport &quot;http&quot; - did you forget to enable it when you configured PHP?) in /home/anotherr/public_html/mail/index.php on line 15
+[18-Jun-2012 20:51:17 UTC] PHP Warning:  fgets() expects parameter 1 to be resource, boolean given in /home/anotherr/public_html/mail/index.php on line 17
