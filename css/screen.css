@@ -55,9 +55,23 @@ strong{font-weight:700;}
 #about figure{margin-bottom:20px;}
 #about img + figcaption{margin-left:15px; display:block; color:#fff; font-size:1.3em;}
 
-#orbit-wrapper {border:3px solid #FFC540; margin:15px;}
-#image-rotator img, #image-rotator div{width: 468px; height:707px; max-width:none;}
-#image-rotator div > a {position:absolute; bottom: 15px; left:30px; font-weight:bold; text-decoration:underline;}
+[data-ss-widget="carousel"] [data-ss-component="button"][data-ss-button-type="prev"] {
+  position:absolute; 
+  bottom: 30px; 
+  left:0px; 
+  height: 100px;
+  width: 78px;
+  background: url(../img/orbit/left-arrow.png);
+}
+[data-ss-widget="carousel"] [data-ss-component="button"][data-ss-button-type="next"] {
+  position:absolute; 
+  bottom: 30px; 
+  right:0px; 
+  height: 100px;
+  width: 78px;
+  background: url(../img/orbit/right-arrow.png);
+}
+
 
 #main-footer{margin-bottom:40px; padding:15px 0;}
 #main-footer textarea{height:120px;}
@@ -92,16 +106,17 @@ border-radius:5px;}
 @media only screen and (max-width: 767px) {
     /* Style adjustments for viewports that meet the condition */
 	#main-header{margin-top:10px;}
-	img{max-width:90%;}
 	input, label, textarea{margin-left:10px; margin-right:10px; display:block; width:93%!important;}
 	input.button{margin-left:10px;}
+	.container{padding: 0;}
 	figure{text-align: center;}
+	h2, .copyright {padding: 0 10px; -webkit-box-sizing: border-box; box-sizing: border-box;}
 	#content p, #content blockquote{font-size:1em;}
 	#content blockquote+address{font-size:.8em; margin-right:10px; margin-bottom:10px;}
 	#main-footer p{font-size:1em;}
-	.orbit-wrapper{display: none;}
 	footer span{padding-left: 10px;}
 	footer label{line-height: normal; height: 30px;}
+	[data-ss-widget="carousel"] [data-ss-component="button"] { display: none;}
 }
 
 /*

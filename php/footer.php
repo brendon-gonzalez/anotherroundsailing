@@ -38,6 +38,7 @@
     <script src="<?php echo $base_url ?>js/main.js"></script>
 	<script src="<?php echo $base_url ?>js/validate.js"></script>
 	<script src="<?php echo $base_url ?>js/vendor/jquery.orbit-1.2.3.min.js"></script>
+	    <script src="//divgzeiu68c7e.cloudfront.net/soysauce/v1.1.95/soysauce.js"></script>
 	
     <script>
 

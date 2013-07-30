@@ -1,24 +1,25 @@
 /* Author: Brendon Gonzalez */
 $(function(){
-	 $(window).load(function() {
-         $('#image-rotator').orbit({
-			fluid: '468x707'
-		 });
-  });
 	$('#submiter').click(function(e) {
 		$('#contact-us').validate({ errorElement: "small"});
 		$('.failsafe').addClass('hidden');
 		if ($('form').valid()) {
 			$('.loader').removeClass('hidden');
+			var formdata = {
+  			name: $('.name').val(), 
+  			phone: $('.phone').val(), 
+  			email: $('.email').val(), 
+  			message:$('.message').val()
+			}
 			$.ajax({
   			url:'../php/contact_process.php',
   			type:'POST',
-  			data: {name:$('.name').val(), phone:$('.phone').val(), email:$('.email').val(), message:$('.message').val()},
-  			dataType:'json',
+  			data: formdata,
+  			dataType :'json',
 			})
 			.done(function(data){
 				$('.loader').addClass('hidden');
-				if(data.error!=null){
+				if (data.error !=null) {
 					$('.failsafe').html(data.error).removeClass('hidden');
 				} else {
 					if(data.type!='success'){
@@ -48,8 +49,6 @@ $(function(){
       }
     }
   });
-
-
 
   $(".num-only").keydown(function(event) {
     // Allow: backspace, delete, tab and escape

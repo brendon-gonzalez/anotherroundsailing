@@ -3,6 +3,7 @@
     <meta name="description" content="Sail around Lake Erie &amp; Presque Isle Bay aboard Another Round a 28' O'day sail boat.">
     <meta name="keywords" content="Lake Erie, Preque Isle, Another Round, Sailing, Sail">
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="//divgzeiu68c7e.cloudfront.net/soysauce/v1.1.95/soysauce.css" />
     <link type="favicon" href="<?php echo $base_url ?>favicon.ico" />
     <link rel="stylesheet" href="<?php echo $base_url ?>css/foundation.css">
     <link rel="stylesheet" href="<?php echo $base_url ?>css/screen.css">

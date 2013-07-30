@@ -21,6 +21,14 @@
 			<?php include 'php/navigation.php'; ?>
 			<h2 class="row">What's it Entail?</h2>
 			<div id="entail" class="row rounded">
+			  <section class="six columns">
+          <div data-ss-widget="carousel" data-ss-options="autoscroll">
+						<div data-ss-component="item"><img src="<?php echo $base_url.'img/boat_2.jpg' ?>" alt="Another Round Boat" /></div>
+						<div data-ss-component="item"><img src="<?php echo $base_url.'img/boat_new.jpg' ?>" alt="Another Round Boat" /></div>
+						<div data-ss-component="item"><img src="<?php echo $base_url.'img/people.jpg' ?>" alt="Partiers" /></div>
+						<div data-ss-component="item"><img src="<?php echo $base_url.'img/marina.jpg' ?>" alt="Marina" /></div>
+          </div>
+				</section>
 				<section class="six columns">
 					<p>Mike Gonzalez and Vito Randazzo would like to welcome you aboard Another Round, a 28 ft. O’Day sailboat. What better way to spend a summer day or evening than sailing on the waters of Lake Erie.</p>
 					<p>Another Round can accommodate up to four passengers and will take you on a minimum of a two hour cruise. Come experience the joy and relaxation that being out on the water can bring</p>
@@ -28,14 +36,6 @@
 					</p>
 					<p>Charters are available on Wednesdays and Saturdays by appointment.</p>
 						
-				</section>
-				<section class="six columns">
-					<div id="image-rotator">
-						<img src="<?php echo $base_url.'img/boat_2.jpg' ?>" alt="Another Round Boat" />
-						<img src="<?php echo $base_url.'img/boat_new.jpg' ?>" alt="Another Round Boat" />
-						<img src="<?php echo $base_url.'img/people.jpg' ?>" alt="Partiers" />
-						<img src="<?php echo $base_url.'img/marina.jpg' ?>" alt="Marina" />
-					</div>
 				</section>
 			</div>
 			<img src="<?php echo $base_url.'img/rope.png' ?>" class="rope" />
