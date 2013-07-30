@@ -1,41 +1,57 @@
 /* Author: Brendon Gonzalez */
 $(function(){
-	$('#submiter').click(function(e) {
-		$('#contact-us').validate({ errorElement: "small"});
-		$('.failsafe').addClass('hidden');
-		if ($('form').valid()) {
-			$('.loader').removeClass('hidden');
-			var formdata = {
-  			name: $('.name').val(), 
-  			phone: $('.phone').val(), 
-  			email: $('.email').val(), 
-  			message:$('.message').val()
-			}
-			$.ajax({
-  			url:'../php/contact_process.php',
-  			type:'POST',
-  			data: formdata,
-  			dataType :'json',
-			})
-			.done(function(data){
-				$('.loader').addClass('hidden');
-				if (data.error !=null) {
-					$('.failsafe').html(data.error).removeClass('hidden');
-				} else {
-					if(data.type!='success'){
-						$('.'+data.name).after('<small class="error">'+data.details+'</small>')	
-					} else {
-						$('.failsafe').removeClass('hidden');
-					}
-				}
-			})
-			.fail(function(data){
-				$('.loader').addClass('hidden');
-				$('.failsafe').removeClass('hidden').html('Try Submitting Again.');
-			})
-		}		
-		e.preventDefault();	
-	});
+  //modular submittal
+  var submitter = {
+    selector: $('#submiter'),
+    init: function () {
+      this.addListeners();
+    },
+    addListeners: function() {
+      var self = this;
+      this.selector.click(function(e) {
+        e.preventDefault();
+        self.submitHandler();
+      });
+    },
+    submitHandler: function () {
+      $('#contact-us').validate({ errorElement: "small"});
+      $('.failsafe').addClass('hidden');
+      if ($('form').valid()) {
+  			$('.loader').removeClass('hidden');
+  			var formdata = {
+    			name: $('.name').val(), 
+    			phone: $('.phone').val(), 
+    			email: $('.email').val(), 
+    			message: $('.message').val()
+  			}
+  			
+  			$.ajax({
+    			url:'../php/contact_process.php',
+    			type:'POST',
+    			data: formdata,
+    			dataType :'json',
+  			})
+  			.done(function(data){
+  				$('.loader').addClass('hidden');
+  				if (data.error !=null) {
+  					$('.failsafe').html(data.error).removeClass('hidden');
+  				} else {
+  					if(data.type!='success'){
+  						$('.'+data.name).after('<small class="error">'+data.details+'</small>')	
+  					} else {
+  						$('.failsafe').removeClass('hidden');
+  					}
+  				}
+  			})
+  			.fail(function(data){
+  				$('.loader').addClass('hidden');
+  				$('.failsafe').removeClass('hidden').html('Try Submitting Again.');
+  			})
+  		}	
+    }
+  }
+  
+  submitter.init();
 	
 	$('form input, form textarea').blur(function(){
 		$('form').validate({ errorElement: "small"}).element($(this));
