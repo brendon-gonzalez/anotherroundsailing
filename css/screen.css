@@ -1,0 +1,105 @@
+/* =============================================================================
+   Chrome Frame Prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* Color Hexes
+ 
+ * Prime Blue - 00d2ff
+ * Light Blue - 74E3FF
+ * Dark Blue - 0024A6
+ * Light Tan - FFC540
+ * Bright Tan - FFB100
+ * White Tan - FFE584
+ * */
+
+
+
+/* ==|== primary styles =====================================================
+   Author: Brendon Gonzlez
+   ========================================================================== */
+html{background:url(../img/background_html.jpg) top center repeat-x #00a2ff;}
+body{font-family: 'Droid Sans', sans-serif; font-weight:400; width:auto; background:url(../img/background_body.png) bottom center no-repeat fixed;}
+h2,h3,h4{clear:both; font-weight:400; display:block; color:#eee;}
+h2.row,h3.row{margin-bottom:20px;}
+address{font-size:1.2em;}
+small{font-size:1em;}
+hr.row{margin-top:40px; margin-bottom:20px; display:block; border:1px solid #FFC540;}
+a:link, a:visited{color:#ddd;}
+a:hover{color:#ccc; text-decoration:underline;}
+p,blockquote{font-size:1.5em; color:#efefef;}
+p{clear:both; line-height:2.2em;}
+blockquote{padding:20px; padding-left:40px; border:none; background:#ddd; font-style:italic; margin:0 0 5px; color:#000000; margin:10px;}
+blockquote+address{display:block; float:right; text-align:right; font-style:italic; margin-bottom:40px; color:#efefef;}
+strong{font-weight:700;}
+
+#main-header{text-align:center; margin-top: 75px; margin-bottom:30px;}
+#main-header h1, #main-header h2, #main-header h3{color:#eee;}
+
+#main-nav{position:fixed; top:0; left:0; font-size:1.5em; display:block; background:url(../img/background_nav.png) #FFC540; padding:20px; width:100%; z-index:10; border-bottom:2px solid #FFB100;}
+#main-nav ul{max-width:980px; margin:0 auto;}
+#main-nav ul li{float:right; margin:0 10px;}
+#main-nav a:link, #main-nav a:visited{color:#fff;}
+
+
+#entail, #about, #main-footer{background:url(../img/80percent.png); background:rgba(0,0,0,.8)}
+#entail p{padding:15px;}
+#about p{padding:0 15px;}
+#entail img, #about img{margin:15px; border:3px solid #FFC540;}
+
+#main-footer{margin-bottom:40px; padding:15px 0;}
+#main-footer textarea{height:120px;}
+#main-footer label{color:#efefef;}
+#main-footer p{padding:0 0 0 15px;}
+
+
+.copyright{display:block; max-width: 980px; text-align:right; margin:10px auto 0; color:#000000;}
+img.rope{margin:20px auto 20px; display:block;}
+
+/* Helper Classes */
+.shadow{-moz-box-shadow: 5px 5px 15px #121212;
+-webkit-box-shadow: 5px 5px 15px #454545;
+box-shadow: 5px 5px 15px #454545;}
+.blue.shadow{-moz-box-shadow: 5px 5px 10px #0024A6;
+-webkit-box-shadow: 5px 5px 10px #0024A6;
+box-shadow: 5px 5px 10px #0024A6;}
+.rounded{-moz-border-radius:5px;
+-webkit-border-radius:5px;
+border-radius:5px;}
+
+/* I hate IE */
+.lt-ie9 input{width:100%;}
+.lt-ie9 input[type=submit]{width:50%;}
+
+/* ==|== media queries ======================================================
+   EXAMPLE Media Query for Responsive Design.
+   This example overrides the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width: 767px) {
+    /* Style adjustments for viewports that meet the condition */
+	#main-header{margin-top:10px;}
+	img{max-width:90%;}
+	input, label, textarea{margin-left:10px; margin-right:10px; display:block; width:93%!important;}
+	input.button{margin-left:10px;}
+	#content p, #content blockquote{font-size:1em;}
+	#content blockquote+address{font-size:.8em; margin-right:10px; margin-bottom:10px;}
+	#main-footer p{font-size:1em;}
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
