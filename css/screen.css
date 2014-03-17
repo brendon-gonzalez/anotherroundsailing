@@ -11,7 +11,7 @@
 
 
 /* Color Hexes
- 
+
  * Prime Blue - 00d2ff
  * Light Blue - 74E3FF
  * Dark Blue - 0024A6
@@ -56,20 +56,35 @@ strong{font-weight:700;}
 #about img + figcaption{margin-left:15px; display:block; color:#fff; font-size:1.3em;}
 
 [data-ss-widget="carousel"] [data-ss-component="button"][data-ss-button-type="prev"] {
-  position:absolute; 
-  bottom: 30px; 
-  left:0px; 
+  position:absolute;
+  bottom: 30px;
+  left:0px;
   height: 100px;
   width: 78px;
   background: url(../img/orbit/left-arrow.png);
 }
 [data-ss-widget="carousel"] [data-ss-component="button"][data-ss-button-type="next"] {
-  position:absolute; 
-  bottom: 30px; 
-  right:0px; 
+  position:absolute;
+  bottom: 30px;
+  right:0px;
   height: 100px;
   width: 78px;
   background: url(../img/orbit/right-arrow.png);
+}
+
+[data-ss-widget="carousel"] [data-ss-component="item"] {
+  position: relative;
+}
+
+aside.courtesy {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  padding: 5px;
+  border: 1px solid light-gray;
+  display: inline-block;
+  font-size: 9px;
 }
 
 
