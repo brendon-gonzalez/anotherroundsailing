@@ -40,6 +40,7 @@
 						</div>
 						<div data-ss-component="item"><img src="<?php echo $base_url.'img/fun1.jpg' ?>" alt="Chris" /></div>
 						<div data-ss-component="item"><img src="<?php echo $base_url.'img/chris1.jpg' ?>" alt="Fun" /></div>
+						<div data-ss-component="item"><img src="<?php echo $base_url.'img/jerry1.jpg' ?>" alt="Jerry" /></div>
           </div>
 				</section>
 				<section class="six columns">

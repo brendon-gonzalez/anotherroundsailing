@@ -17,7 +17,7 @@ $email_config = array ('host' => "mail.anotherroundsailing.com",
         //This needs to be a gmail address. Otherwise you have to update the host and port numbers.
         'username' => "mike@anotherroundsailing.com",
         //your GMAIL password. This just routes the email on your site through gmail's open smtp services.
-        'password' => "85Oday28");
+        'password' => "MikeG81484");
 
 //1 for live, 2 for test - Probably won't need to change this. Email me if there is a problem. bmgonzalezmm@gmail.com
 $pkey=2;
