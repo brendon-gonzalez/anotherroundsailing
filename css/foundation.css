@@ -1,7 +1,7 @@
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;padding: 0;border: 0;font: inherit;vertical-align: baseline;}
 html {font-size: 62.5%;}
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {display: block;}
 body {line-height: 1;}
 ol, ul {list-style: none;}
@@ -59,7 +59,7 @@ table tbody tr.alt { background: #f9f9f9; }
 table tbody tr:nth-child(even) { background: #f9f9f9; }
 table tbody tr td { color: #333; padding: 9px 10px; vertical-align: top; border: none; }
 
-/* -------------------------------------------------- 
+/* --------------------------------------------------
 :: Misc
 ---------------------------------------------------*/
 .left        { float: left; }
@@ -149,7 +149,7 @@ lets Foundation work much of its magic.
 
 .container { padding: 0 20px; }
 
-.row { width: 100%; /*max-*/width: 980px; min-width: 727px; margin: 0 auto; }
+.row { width: 100%; max-width: 1200px; min-width: 727px; margin: 0 auto; }
 /* To fix the grid into a certain size, set max-width to width */
 .row .row { min-width: 0; }
 
@@ -222,13 +222,13 @@ lets Foundation work much of its magic.
 img, object, embed { max-width: 100%; height: auto; }
 img { -ms-interpolation-mode: bicubic; }
 #map_canvas img, .map_canvas img {max-width: none!important;}
- 
+
  /* Nicolas Gallagher's micro clearfix */
  .row:before, .row:after, .clearfix:before, .clearfix:after { content:""; display:table; }
  .row:after, .clearfix:after { clear: both; }
  .row, .clearfix { zoom: 1; }
- 
- 
+
+
 
 
 /*	--------------------------------------------------
@@ -317,7 +317,7 @@ button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="but
 	border: none;
 }
 
-.button.nice { 
+.button.nice {
 	background: #00a6fc url(../images/misc/button-gloss.png) repeat-x 0 -31px;
 	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
 	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
@@ -385,10 +385,10 @@ button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="but
 .red.button:hover, .red.button:focus 		{ background-color: #d01217; }
 .white.button:hover, .white.button:focus	{ background-color: #dadada; color: #333; }
 .black.button:hover, .black.button:focus	{ background-color: #000; }
-.green.button:hover, .green.button:focus	{ background-color: #699c40; }	
+.green.button:hover, .green.button:focus	{ background-color: #699c40; }
 
 /* Hovers ---------- */
-.nice.button:active 	{ 
+.nice.button:active 	{
 	-moz-box-shadow: inset 0 1px 0 rgba(0,0,0,.15);
 	-webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,.15);
 	box-shadow: inset 0 1px 0 rgba(0,0,0,.15);
@@ -450,7 +450,7 @@ dl.tabs dd a.active { background: #fff; border-width: 1px 1px 0 1px; height: 30p
 	.nice.tabs dd a { padding: 7px 18px 9px; font-size: 15px; font-size: 1.5rem; color: #555555; background: none; border: none; }
 	.nice.tabs dd a.active { font-weight: bold; color: #333; background: #fff; border-left: 1px solid #eee; border-right: 1px solid #eee; border-top: 3px solid #00a6fc; margin: 0 10px; position: relative; top: -5px; }
 	.nice.tabs dd:first-child a.active { margin-left: 0; }
-	
+
 dl.tabs.vertical { height: auto; }
 dl.tabs.vertical dt, dl.tabs.vertical dd, dl.nice.tabs.vertical dt, dl.nice.tabs.vertical dd { float: none; height: auto; }
 dl.tabs.vertical dd a { display: block; width: auto; height: auto; padding: 15px 20px; line-height: 1; border: solid 0 #ccc; border-width: 1px 1px 0; margin: 0; color: #555; background: #eee; font-size: 15px; font-size: 1.5rem; }
@@ -487,7 +487,7 @@ ul.pagination li.unavailable:hover a, ul.pagination li.unavailable a:focus { bor
 
 /*  --------------------------------------------------
 Breadcrumbs
--------------------------------------------------- */    
+-------------------------------------------------- */
 ul.breadcrumbs { display: block; background: #f4f4f4; padding: 7px 10px; border: 1px solid #ddd; border-radius: 2px; overflow: hidden; }
 ul.breadcrumbs li { margin: 0; padding: 0 12px 0 0; float: left; }
 ul.breadcrumbs li a, ul.breadcrumbs li span { text-transform: uppercase; font-size: 11px; padding-left: 12px; }
@@ -527,7 +527,7 @@ div.panel {
 Nav Bar with Dropdowns
 -------------------------------------------------- */
 
-.nav-bar { height: 45px; background: #fff; margin-top: 20px; border: 1px solid #ddd; }	
+.nav-bar { height: 45px; background: #fff; margin-top: 20px; border: 1px solid #ddd; }
 .nav-bar>li { float: left; display: block; position: relative; padding: 0; margin: 0; border-right: 1px solid #ddd; line-height: 45px; }
 .nav-bar>li>a.main { position: relative; padding: 0 20px; display: block; text-decoration: none; font-size: 15px; font-size: 1.5rem; }
 .nav-bar>li>input { margin: 0 16px; }
@@ -817,17 +817,17 @@ form.custom.nice div.custom.dropdown ul { border-bottom-left-radius: 2px; border
  * Copyright 2010, ZURB
  * Free to use under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- 
- 
- 
+
+
+
 /* PUT IN YOUR SLIDER ID AND SIZE TO MAKE LOAD BEAUTIFULLY
    ================================================== */
-#featured { 
+#featured {
 	width: 940px;
 	height: 450px;
 	background: #000 url('../img/orbit/loading.gif') no-repeat center center;
 	overflow: hidden; }
-#featured>img,  
+#featured>img,
 #featured>div,
 #featured>a { display: none; }
 
@@ -859,7 +859,7 @@ div.orbit>a {
     position: absolute;
     top: 0;
     left: 0;
-    line-height: 0; 
+    line-height: 0;
     display: none; }
 
 .orbit>div {
@@ -968,12 +968,12 @@ div.slider-nav span {
     z-index: 1000;
     bottom: 7%;
     margin-top: -50px;
-    cursor: pointer; 
+    cursor: pointer;
 	}
 
 div.slider-nav span.right {
     background: url(../img/orbit/right-arrow.png) no-repeat;
-    right: 0; 
+    right: 0;
 	-webkit-background-size:40px;
 	-moz-background-size:40px;
 	-o-background-size:40px;
@@ -982,7 +982,7 @@ div.slider-nav span.right {
 
 div.slider-nav span.left {
     background: url(../img/orbit/left-arrow.png) no-repeat;
-    left: 0; 
+    left: 0;
 	-webkit-background-size:40px;
 	-moz-background-size:40px;
 	-o-background-size:40px;
@@ -1015,7 +1015,7 @@ div.slider-nav span.left {
 .orbit-bullets li.active {
     color: #222;
     background-position: -8px 0; }
-    
+
 .orbit-bullets li.has-thumb {
     background: none;
     width: 100px;
@@ -1032,21 +1032,21 @@ div.slider-nav span.left {
 /*	--------------------------------------------------
 Reveal Modals
 -------------------------------------------------- */
-	
-.reveal-modal-bg { 
-	position: fixed; 
+
+.reveal-modal-bg {
+	position: fixed;
 	height: 100%;
 	width: 100%;
 	background: #000;
 	z-index: 40;
 	display: none;
 	top: 0;
-	left: 0; 
+	left: 0;
 	}
 
 .reveal-modal {
 	visibility: hidden;
-	top: 100px; 
+	top: 100px;
 	left: 50%;
 	margin-left: -300px;
 	width: 520px;
@@ -1061,7 +1061,7 @@ Reveal Modals
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
 	box-shadow: 0 0 10px rgba(0,0,0,.4);
 	}
-	
+
 .reveal-modal.small 		{ width: 200px; margin-left: -140px;}
 .reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
 .reveal-modal.large 		{ width: 600px; margin-left: -340px;}
@@ -1077,27 +1077,27 @@ Reveal Modals
 	text-shadow: 0 -1px 1px rbga(0,0,0,.6);
 	font-weight: bold;
 	cursor: pointer;
-	} 
+	}
 
 .reveal-modal .row {
 	min-width: 0;
 }
 
 /* Mobile */
-	
+
 	@media handheld, only screen and (max-width: 1023px) {
 		.reveal-modal-bg { position: absolute; }
-		
+
 		.reveal-modal,
 		.reveal-modal.small,
 		.reveal-modal.medium,
 		.reveal-modal.large,
 		.reveal-modal.xlarge { width: 60%; top: 60px; left: 15%; margin-left: 0; padding: 20px; height: auto; }
 	}
-	
+
 	@media handheld, only screen and (max-width: 767px) {
 		.reveal-modal-bg { position: absolute; }
-		
+
 		.reveal-modal,
 		.reveal-modal.small,
 		.reveal-modal.medium,
@@ -1107,7 +1107,7 @@ Reveal Modals
 
 
 /*
-		
+
 NOTES
 
 Close button entity is &#215;
@@ -1135,7 +1135,7 @@ Example markup
 	h4 { font-size: 18px; font-size: 1.8rem; line-height: 1.2; }
 	h5 { font-size: 16px; font-size: 1.6rem; line-height: 1.2; }
 	h6 { font-size: 15px; font-size: 1.5rem; line-height: 1.2; }
-	body, p {  font-size: 15px; font-size: 1.5rem; line-height: 1.4; } 
+	body, p {  font-size: 15px; font-size: 1.5rem; line-height: 1.4; }
 }
 
 
@@ -1146,7 +1146,7 @@ Example markup
 /* Mobile */
 
 
-@media only screen and (max-width: 767px) {		
+@media only screen and (max-width: 767px) {
 	body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
 	.container { min-width: 0; margin-left: 0; margin-right: 0; }
 	.row { width: 100%; min-width: 0; margin-left: 0; margin-right: 0; }
@@ -1156,39 +1156,39 @@ Example markup
 	[class*="column"] + [class*="column"]:last-child { float: none; }
 	.column:before, .columns:before, .column:after, .columns:after { content:""; display:table; }
 	.column:after, .columns:after { clear: both; }
-	
+
 	.offset-by-one, .offset-by-two, .offset-by-three, .offset-by-four, .offset-by-five, .offset-by-six, .offset-by-seven, .offset-by-eight, .offset-by-nine, .offset-by-ten, .offset-by-eleven, .centered { margin-left: 0 !important; }
-	
+
 	.push-two, .push-three, .push-four, .push-five, .push-six, .push-seven, .push-eight, .push-nine, .push-ten { left: auto; }
 	.pull-two, .pull-three, .pull-four, .pull-five, .pull-six, .pull-seven, .pull-eight, .pull-nine, .pull-ten { right: auto; }
-	
+
 	/* Mobile 4-column Grid */
 
 	.row .phone-one:first-child, .row .phone-two:first-child, .row .phone-three:first-child, .row .phone-four:first-child { margin-left: 0; }
 	.row .phone-one:last-child, .row .phone-two:last-child, .row .phone-three:last-child, .row .phone-four:last-child { float: right; }
-	
+
 	.row .phone-one, .row .phone-two, .row .phone-three, .row .phone-four { margin-left: 4.4%; float: left; min-height: 1px; position: relative; padding: 0; }
-	
+
 	.row .phone-one 	{ width: 21.68% !important; }
 	.row .phone-two 	{ width: 47.8% !important; }
 	.row .phone-three 	{ width: 73.9% !important; }
 	.row .phone-four 	{ width: 100% !important; }
-	
+
 	.row .push-one-phone { left: 26.08%; }
 	.row .push-two-phone { left: 52.2% }
 	.row .push-three-phone { left: 78.3% }
-	
+
 	.row .pull-one-phone { right: 26.08% }
 	.row .pull-two-phone { right: 52.2% }
 	.row .pull-three-phone { right: 78.3%; }
-	
-	
+
+
 }
 
 
 /* --------------------------------------------------
 :: Block Grids
--------------------------------------------------- */	
+-------------------------------------------------- */
 
 @media only screen and (max-width: 767px) {
 	.block-grid.mobile { margin-left: 0; }
@@ -1197,16 +1197,16 @@ Example markup
 
 
 
-/* -------------------------------------------------- 
+/* --------------------------------------------------
 :: Mobile Visibility Affordances
 ---------------------------------------------------*/
 
 
-.show-on-phones { display: none !important; }	
+.show-on-phones { display: none !important; }
 .show-on-tablets { display: none !important; }
 .show-on-desktops { display: block !important; }
 
-.hide-on-phones { display: block !important; }	
+.hide-on-phones { display: block !important; }
 .hide-on-tablets { display: block !important; }
 .hide-on-desktops { display: none !important; }
 
@@ -1216,18 +1216,18 @@ Example markup
 	.touch .hide-on-phones { display: block !important; }
 	.touch .hide-on-tablets { display: none !important; }
 	.touch .hide-on-desktops { display: block !important; }
-	
+
 	.touch .show-on-phones { display: none !important; }
 	.touch .show-on-tablets { display: block !important; }
 	.touch .show-on-desktops { display: none !important; }
 }
 
-	
+
 @media only screen and (max-width: 767px) {
 	.hide-on-phones { display: none !important; }
 	.hide-on-tablets { display: block !important; }
 	.hide-on-desktops { display: block !important; }
-	
+
 	.show-on-phones { display: block !important; }
 	.show-on-tablets { display: none !important; }
 	.show-on-desktops { display: none !important; }
@@ -1237,7 +1237,7 @@ Example markup
 /* Specific overrides for elements that require something other than display: block */
 
 table.show-on-desktops { display: table !important; }
-table.hide-on-phones { display: table !important; }	
+table.hide-on-phones { display: table !important; }
 table.hide-on-tablets { display: table !important; }
 
 @media only screen and (max-width: 1280px) and (min-width: 768px) {
@@ -1253,9 +1253,9 @@ table.hide-on-tablets { display: table !important; }
 }
 
 
-/* -------------------------------------------------- 
+/* --------------------------------------------------
 :: Forms
----------------------------------------------------*/	
+---------------------------------------------------*/
 
 
 @media only screen and (max-width: 767px) {
@@ -1270,9 +1270,9 @@ table.hide-on-tablets { display: table !important; }
 }
 
 
-/* -------------------------------------------------- 
+/* --------------------------------------------------
 :: UI
----------------------------------------------------*/	
+---------------------------------------------------*/
 
 /* Buttons */
 @media only screen and (max-width: 767px) {
@@ -1293,11 +1293,11 @@ table.hide-on-tablets { display: table !important; }
 	.nice.tabs.mobile dd a { padding: 18px 20px; border: none; border-left: none; border-right: none; border-top: 1px solid #ccc; background: #fff; }
 	.nice.tabs.mobile dd a.active { border: none; background: #00a6fc; color: #fff; margin: 0; position: static; top: 0; height: auto; }
 	.nice.tabs.mobile dd:first-child a.active { margin: 0; }
-	
+
 	dl.contained.mobile, dl.nice.contained.mobile { margin-bottom: 0; }
 	dl.contained.tabs.mobile dd a { padding: 18px 20px; }
 	dl.nice.contained.tabs.mobile dd a { padding: 18px 20px; }
-	
+
 	dl.tabs.mobile + ul.contained { margin-left: -20px; margin-right: -20px; border-width: 0 0 1px 0; }
 }
 
@@ -1317,7 +1317,7 @@ table.hide-on-tablets { display: table !important; }
 	.nav-bar>li.has-flyout>a.flyout-toggle { position: absolute; right: 0; top: 0; padding: 22px; z-index: 2; border-left: 1px dashed #eee; display: block; }
 	.nav-bar>li.has-flyout>a.flyout-toggle span { content: ""; width: 0; height: 0; border-left: 4px solid transparent;border-right: 4px solid transparent; border-top: 4px solid #2a85e8; display: block; }
 	.nav-bar>li.has-flyout>a.flyout-toggle:hover span { border-top-color: #141414; }
-	
+
 	.flyout { position: relative; width: auto; top: auto; margin-right: -2px; border-width: 1px 1px 0 1px; }
 	.flyout.right { float: none; right: auto; left: -1px; }
 	.flyout.small, .flyout.large { width: auto; }

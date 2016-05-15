@@ -49,11 +49,16 @@ strong{font-weight:700;}
 #main-nav a:link, #main-nav a:visited{color:#fff;}
 
 
-#entail, #about, #main-footer{background:url(../img/80percent.png); background:rgba(0,0,0,.8)}
+#entail, #about, #location, #main-footer, #links{background:url(../img/80percent.png); background:rgba(0,0,0,.8)}
 #entail p{padding:15px;}
 #about p{padding:0 15px;}
 #about figure{margin-bottom:20px;}
 #about img + figcaption{margin-left:15px; display:block; color:#fff; font-size:1.3em;}
+
+#location p { padding: 15px 15px 0 0;}
+[data-ss-widget="carousel"] {
+  max-height: 800px;
+}
 
 [data-ss-widget="carousel"] [data-ss-component="button"][data-ss-button-type="prev"] {
   position:absolute;
@@ -93,6 +98,8 @@ aside.courtesy {
 #main-footer label{color:#efefef;}
 #main-footer p{padding:0 0 0 15px;}
 
+#links{margin-bottom: 40px; padding: 15px;}
+#links a{text-decoration: underline;}
 
 .copyright{display:block; max-width: 980px; text-align:right; margin:10px auto 0; color:#000000;}
 img.rope{margin:20px auto 20px; display:block;}

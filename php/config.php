@@ -7,7 +7,7 @@ $request  = str_replace("/pages/", "", $_SERVER['REQUEST_URI']);
 #split the path by '/'
 $params     = explode("/", $request);
 #keeps users from requesting any file they want
-$safe_pages = array();
+$safe_pages = array('mailer');
 
 //the email to receive your requests to
 $to_email="mike@anotherroundsailing.com";
